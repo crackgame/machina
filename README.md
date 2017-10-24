@@ -1,9 +1,12 @@
 # machina
 高度可定制状态机
 
-# run example
-cd example
-# out
+# Run example
+    cd example
+    go run main.go
+```
+output:
+
 1. UnitFsm.handle(unit, 'tick', 100, 5);
 transition: idle undefined => idle
 enter idle1
@@ -25,3 +28,4 @@ enter idle2
 idle confirm: idle 100
 ready enter2: idle
 cd confirm2:, idle 100
+```
