@@ -5,6 +5,7 @@ const (
 	EvtEnter      = "_onEnter"
 	EvtExit       = "_onExit"
 	Undefined     = "undefined"
+	AlwayEvent    = "*"
 )
 
 type FSM struct {
