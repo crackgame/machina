@@ -1,5 +1,7 @@
 package machina
 
+import "github.com/crackgame/emitter"
+
 const (
 	EvtTransition = "transition"
 	EvtEnter      = "_onEnter"
@@ -11,14 +13,14 @@ const (
 type FSM struct {
 	initialState string
 	states       map[string]*State
-	*Emitter
+	*emitter.Emitter
 }
 
 func NewFSM(initialState string, states map[string]*State) *FSM {
 	fsm := &FSM{
 		initialState: initialState,
 		states:       states,
-		Emitter:      NewEmitter(),
+		Emitter:      emitter.NewEmitter(),
 	}
 	return fsm
 }
